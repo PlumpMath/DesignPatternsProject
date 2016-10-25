@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="StarbuzzV2.AbstracFactory.AnimalWorld">
+    <Position X="16" Y="4" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACA=</HashCode>
+      <FileName>AbstractFactory\AnimalWorld.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.AbstracFactory.Carnivore">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory\Carnivore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.AbstracFactory.Bison">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory\ConcreteAnimals\Bison.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.AbstracFactory.Lion">
+    <Position X="14.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory\ConcreteAnimals\Lion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.AbstracFactory.Wildebeest">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory\ConcreteAnimals\Wildebeest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.AbstracFactory.Wolf">
+    <Position X="12" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory\ConcreteAnimals\Wolf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.AbstracFactory.AfricaFactory">
+    <Position X="7" Y="4.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory\ConcreteFactories\AfricaFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.AbstracFactory.AmericaFactory">
+    <Position X="10.5" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory\ConcreteFactories\AmericaFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.AbstracFactory.ContinentFactory">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory\ContinentFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.AbstracFactory.Herbivore" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AbstractFactory\Herbivore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

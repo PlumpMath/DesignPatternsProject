@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="StarbuzzV2.Command.Calculator">
+    <Position X="12.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Command\Calculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.Command.Command">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\Command.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.Command.User">
+    <Position X="12.5" Y="2.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAABAAAAAAAIAABAAAAAAAAAAAABBAAAAA=</HashCode>
+      <FileName>Command\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarbuzzV2.Command.ConcreteCommands.CalculatorCommand">
+    <Position X="7" Y="2.75" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAABAQAAAAAIAAAAAAMAAAAAAAAAAEAIAA=</HashCode>
+      <FileName>Command\ConcreteCommands\CalculatorCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
