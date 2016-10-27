@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ using StarbuzzV2.Strategy;
 using StarbuzzV2.Strategy.ConcreteStrategies;
 using StarbuzzV2.Command;
 using StarbuzzV2.Composite;
+using StarbuzzV2.AD.Week1;
+using StarbuzzV2.AD.Graph;
 
 namespace StarbuzzV2
 {
@@ -18,6 +21,8 @@ namespace StarbuzzV2
     {
         static void Main(string[] args)
         {
+            
+            #region Design Patterns
             #region Decorator Pattern Example
             // Create book
             Esspresso beverage1 = new Esspresso();
@@ -131,8 +136,121 @@ namespace StarbuzzV2
             user.Undo(4);
             user.Redo(3);
             #endregion
+            #endregion
+            
+            #region AD
 
+            #region List
+            MyArrayList list = new MyArrayList(5);
+            //setting values
+            list.add(1);
+            list.add(2);
+            list.add(3);
+            list.add(4);
+            list.add(5);
+
+            Console.WriteLine(list.get(2) + " staat op positie 2");
+            //testing print function
+            list.print();
+            //testing set function
+            list.set(2, 10);//true
+            list.print();
+            list.set(10, 2);//false
+            //occurences test
+            list.set(0, 2);
+            list.set(4, 2);
+            list.countOccurences(2);
+            //testing clear
+            list.clear();
+            list.print();
+            #endregion
+
+            #region Graph
+            Graph g = new Graph();
+
+            try
+            {
+
+                StreamReader d = new StreamReader(Console.ReadLine());
+                string line;
+                while ((line = d.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                    string[] words = line.Split(' ');
+                    try
+                    {
+                        if (words.Length > 3)
+                        {
+                            Console.WriteLine("Skipping bad line: " + line);
+                            continue;
+                        }
+                        string source = words[0];
+                        string dest = words[1];
+                        int cost = Int32.Parse(words[2]);
+
+                        g.addEdge(source, dest, cost);
+                    }
+                    catch (FormatException e)
+                    {
+                        Console.WriteLine("Skipping bad line: " + line);
+                        Console.WriteLine(e);
+                    }
+                }
+            }
+            catch (Exception e) { Console.WriteLine(e); }
+
+            while (processRequest(g));
+            #endregion
+
+
+            #endregion
             Console.ReadKey();
         }
+        #region processRequest
+        public static Boolean processRequest(Graph g)
+        {
+            try
+            {
+                Console.WriteLine("Enter start node: ");
+                String startname = Console.ReadLine();
+
+                Console.WriteLine("Enter destination node: ");
+                String destName = Console.ReadLine();
+
+                Console.WriteLine("Enter algorithm (u,d,n,a): ");
+                String alg = Console.ReadLine();
+                switch (alg)
+                {
+                    case "u":
+                        g.unweighted(startname);
+                        Console.WriteLine("Unweighted started");
+                        break;
+                    case "d":
+                        g.dijkstra(startname);
+                        Console.WriteLine("dijkstra started");
+                        break;
+                    case "n":
+                        g.negative(startname);
+                        Console.WriteLine("negative started");
+                        break;
+                    case "a":
+                        g.acyclic(startname);
+                        Console.WriteLine("acyclic started");
+                        break;
+                }
+
+                g.printPath(destName);
+            }
+            catch (ArgumentException e)
+            {
+                return false;
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+            }
+            return true;
+        }
+
+        #endregion
     }
 }
