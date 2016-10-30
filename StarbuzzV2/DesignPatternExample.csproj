@@ -53,6 +53,8 @@
     <Compile Include="AbstractFactory\ConcreteAnimals\Lion.cs" />
     <Compile Include="AbstractFactory\ConcreteAnimals\Wildebeest.cs" />
     <Compile Include="AbstractFactory\ConcreteAnimals\Wolf.cs" />
+    <Compile Include="AD\BST\BinaryNode.cs" />
+    <Compile Include="AD\BST\BinaryTree.cs" />
     <Compile Include="AD\Graph\Edge.cs" />
     <Compile Include="AD\Graph\Graph.cs" />
     <Compile Include="AD\Graph\Path.cs" />

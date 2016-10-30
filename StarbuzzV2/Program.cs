@@ -14,6 +14,7 @@ using StarbuzzV2.Command;
 using StarbuzzV2.Composite;
 using StarbuzzV2.AD.Week1;
 using StarbuzzV2.AD.Graph;
+using StarbuzzV2.AD.BST;
 
 namespace StarbuzzV2
 {
@@ -199,9 +200,34 @@ namespace StarbuzzV2
             }
             catch (Exception e) { Console.WriteLine(e); }
 
-            while (processRequest(g));
+
+            //while (processRequest(g));
             #endregion
 
+            #region Binairy tree
+            BinaryNode<int> NodeA = new BinaryNode<int>(2);
+            BinaryNode<int> NodeB = new BinaryNode<int>(5);
+            BinaryNode<int> NodeC = new BinaryNode<int>(6);
+            BinaryNode<int> NodeD = new BinaryNode<int>(3);
+            BinaryNode<int> NodeE = new BinaryNode<int>(7);
+            BinaryNode<int> NodeF = new BinaryNode<int>(10);
+            BinaryNode<int> NodeG = new BinaryNode<int>(1);
+
+            NodeE.setRight(NodeG);
+
+            NodeA.setLeft(NodeC);
+            NodeA.setRight(NodeD);
+
+            NodeB.setLeft(NodeE);
+            NodeB.setRight(NodeF);
+
+
+            BinaryTree<int> tree = new BinaryTree<int>(12);
+            tree.Root.setLeft(NodeA);
+            tree.Root.setRight(NodeB);
+
+            tree.printPreOrder();
+            #endregion
 
             #endregion
             Console.ReadKey();
