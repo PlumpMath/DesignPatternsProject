@@ -55,6 +55,9 @@
     <Compile Include="AbstractFactory\ConcreteAnimals\Wolf.cs" />
     <Compile Include="AD\BST\BinaryNode.cs" />
     <Compile Include="AD\BST\BinaryTree.cs" />
+    <Compile Include="AD\BST\PostOrder.cs" />
+    <Compile Include="AD\BST\StNode.cs" />
+    <Compile Include="AD\BST\TreeIterator.cs" />
     <Compile Include="AD\Graph\Edge.cs" />
     <Compile Include="AD\Graph\Graph.cs" />
     <Compile Include="AD\Graph\Path.cs" />
