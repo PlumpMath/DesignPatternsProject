@@ -15,6 +15,7 @@ using StarbuzzV2.Composite;
 using StarbuzzV2.AD.Week1;
 using StarbuzzV2.AD.Graph;
 using StarbuzzV2.AD.BST;
+using StarbuzzV2.COR;
 
 namespace StarbuzzV2
 {
@@ -25,9 +26,7 @@ namespace StarbuzzV2
             
             #region Design Patterns
             #region Decorator Pattern Example
-            // Create book
-            Esspresso beverage1 = new Esspresso();
-            // Make video borrowable, then borrow and display
+            Espresso beverage1 = new Espresso();
             Console.WriteLine("Double Mocha Esspresso");
             Mocha d1 = new Mocha(beverage1);
             Mocha d2 = new Mocha(d1);
@@ -137,8 +136,27 @@ namespace StarbuzzV2
             user.Undo(4);
             user.Redo(3);
             #endregion
-            #endregion
+
+            #region COR (Chain of Responsibility)
+            // Setup Chain of Responsibility
+            Handler h1 = new ConcreteHandlerA();
+            Handler h2 = new ConcreteHandlerB();
+            Handler h3 = new ConcreteHandlerC();
+            h2.SetSuccessor(h3);
+            h1.SetSuccessor(h2);
             
+
+            // Generate and process request
+            int[] requests = { 2, 5, 14, 22, 18, 3, 27, 20 };
+
+            foreach (int request in requests)
+            {
+                h1.HandleRequest(request);
+            }
+            #endregion
+
+            #endregion
+
             #region AD
 
             #region List
@@ -164,6 +182,17 @@ namespace StarbuzzV2
             //testing clear
             list.clear();
             list.print();
+
+            MyLinkedList<int> linkedList = new MyLinkedList<int>();
+            linkedList.addFirst(1);
+            linkedList.addFirst(12);
+            linkedList.addFirst(3);
+            linkedList.addFirst(4);
+            linkedList.addFirst(5);
+            linkedList.insert(0,123);
+            linkedList.remove(12);
+            MyLinkedList<int>.printList(linkedList);
+            Console.ReadLine();
             #endregion
 
             #region Graph

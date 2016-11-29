@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace StarbuzzV2
 {
-    class Esspresso : Beverage
+    class Espresso : Beverage
     {
         // Constructor
-        public Esspresso()
+        public Espresso()
         {
             base.Description = "Esspresso";
         }

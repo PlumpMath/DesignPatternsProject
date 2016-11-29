@@ -63,6 +63,8 @@
     <Compile Include="AD\Graph\Path.cs" />
     <Compile Include="AD\Graph\Scanner.cs" />
     <Compile Include="AD\Graph\Vertex.cs" />
+    <Compile Include="AD\Week1\LinkedListIterator.cs" />
+    <Compile Include="AD\Week1\ListNode.cs" />
     <Compile Include="AD\Week1\MyArrayList.cs" />
     <Compile Include="AD\Week1\MyLinkedList.cs" />
     <Compile Include="AD\Week1\SimpleArrayList.cs" />
@@ -74,9 +76,13 @@
     <Compile Include="Composite\CompositeElement.cs" />
     <Compile Include="Composite\DrawingElement.cs" />
     <Compile Include="Composite\PrimitiveElement.cs" />
+    <Compile Include="COR\ConcreteHandlerA.cs" />
+    <Compile Include="COR\ConcreteHandlerB.cs" />
+    <Compile Include="COR\ConcreteHandlerC.cs" />
+    <Compile Include="COR\Handler.cs" />
     <Compile Include="Decorator\Beverage.cs" />
+    <Compile Include="Decorator\Espresso.cs" />
     <Compile Include="Decorator\Whip.cs" />
-    <Compile Include="Decorator\Esspresso.cs" />
     <Compile Include="Decorator\HouseBlend.cs" />
     <Compile Include="Decorator\Decorator.cs" />
     <Compile Include="Decorator\Mocha.cs" />
@@ -109,10 +115,7 @@
     <None Include="App.config" />
     <None Include="Command\CommandPattern.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="COR\" />
-    <Folder Include="SOLID\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
