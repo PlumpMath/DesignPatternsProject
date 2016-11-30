@@ -63,10 +63,15 @@
     <Compile Include="AD\Graph\Path.cs" />
     <Compile Include="AD\Graph\Scanner.cs" />
     <Compile Include="AD\Graph\Vertex.cs" />
+    <Compile Include="AD\MaxHeap\MaxHeap.cs" />
+    <Compile Include="AD\MaxHeap\Node.cs" />
+    <Compile Include="AD\MinHeap\MinHeap.cs" />
+    <Compile Include="AD\Week1\IStack.cs" />
     <Compile Include="AD\Week1\LinkedListIterator.cs" />
     <Compile Include="AD\Week1\ListNode.cs" />
     <Compile Include="AD\Week1\MyArrayList.cs" />
     <Compile Include="AD\Week1\MyLinkedList.cs" />
+    <Compile Include="AD\Week1\MyStack.cs" />
     <Compile Include="AD\Week1\SimpleArrayList.cs" />
     <Compile Include="AD\Week1\SimpleLinkedList.cs" />
     <Compile Include="Command\Calculator.cs" />

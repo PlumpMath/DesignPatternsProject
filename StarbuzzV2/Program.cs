@@ -15,6 +15,8 @@ using StarbuzzV2.Composite;
 using StarbuzzV2.AD.Week1;
 using StarbuzzV2.AD.Graph;
 using StarbuzzV2.AD.BST;
+using StarbuzzV2.AD.MaxHeap;
+using StarbuzzV2.AD.MinHeap;
 using StarbuzzV2.COR;
 
 namespace StarbuzzV2
@@ -258,6 +260,55 @@ namespace StarbuzzV2
             tree.printPreOrder();
             #endregion
 
+            #region Max heap
+            MaxHeap theHeap = new MaxHeap(21);
+            theHeap.Insert(40);
+            theHeap.Insert(70);
+            theHeap.Insert(20);
+            theHeap.Insert(60);
+            theHeap.Insert(50);
+            theHeap.Insert(100);
+            theHeap.Insert(82);
+            theHeap.Insert(35);
+            theHeap.Insert(90);
+            theHeap.Insert(10);
+            theHeap.DisplayHeap();
+
+            Console.WriteLine("Inserting a new node with value 120");
+            theHeap.Insert(120);
+            theHeap.DisplayHeap();
+
+            Console.WriteLine("Removing max element");
+            theHeap.Remove();
+            theHeap.DisplayHeap();
+
+            Console.WriteLine("Changing root to 130");
+            theHeap.HeapIncreaseDecreaseKey(0, 130);
+            theHeap.DisplayHeap();
+
+            Console.WriteLine("Changing root to 5");
+            theHeap.HeapIncreaseDecreaseKey(0, 5);
+            theHeap.DisplayHeap();
+            Console.ReadLine();
+            #endregion
+
+            #region Min heap
+            int[] arrA = { 3, 2, 1, 7, 8, 4, 10, 16, 12 };
+            Console.WriteLine("Original Array : ");
+            for (int i = 0; i < arrA.Length; i++)
+            {
+                Console.WriteLine("  " + arrA[i]);
+            }
+            MinHeap m = new MinHeap(arrA.Length);
+            Console.WriteLine("\nMin-Heap : ");
+            m.createHeap(arrA);
+            m.display();
+            Console.WriteLine("Extract Min :");
+            for (int i = 0; i < arrA.Length; i++)
+            {
+                Console.WriteLine("  " + m.extractMin());
+            }
+            #endregion
             #endregion
             Console.ReadKey();
         }
