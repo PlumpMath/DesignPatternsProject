@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using StarbuzzV2.AbstracFactory;
 using StarbuzzV2.Factory;
 using Singleton;
+using StarbuzzV2.AD;
 using StarbuzzV2.Observer;
 using StarbuzzV2.Strategy;
 using StarbuzzV2.Strategy.ConcreteStrategies;
@@ -293,11 +294,11 @@ namespace StarbuzzV2
             #endregion
 
             #region Min heap
-            int[] arrA = { 3, 2, 1, 7, 8, 4, 10, 16, 12 };
+            int[] arrA = { 50, 2, 30, 7, 40, 4, 10, 16, 12 };
             Console.WriteLine("Original Array : ");
             for (int i = 0; i < arrA.Length; i++)
             {
-                Console.WriteLine("  " + arrA[i]);
+                Console.Write("  " + arrA[i]);
             }
             MinHeap m = new MinHeap(arrA.Length);
             Console.WriteLine("\nMin-Heap : ");
@@ -306,8 +307,44 @@ namespace StarbuzzV2
             Console.WriteLine("Extract Min :");
             for (int i = 0; i < arrA.Length; i++)
             {
-                Console.WriteLine("  " + m.extractMin());
+                Console.Write("  " + m.extractMin());
             }
+            #endregion
+
+            #region Sorting
+            Console.WriteLine();
+            int[] tmpArray = { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 80, 99, 11, 44, 77, 200, 41 };
+            string seperator = "-----------------------------------------------------------------------";
+            Console.WriteLine(seperator);
+            Console.WriteLine("Base Array: ");
+            SortingAlgorithms.Show_array_elements(tmpArray);
+            Console.WriteLine(seperator);
+            
+            SortingAlgorithms.ShellSort(tmpArray);
+            Console.WriteLine("Shell sorted Array: ");
+            SortingAlgorithms.Show_array_elements(tmpArray);
+            Console.WriteLine(seperator);
+            Console.ReadKey();
+
+            tmpArray = new [] { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 80, 99, 11, 44, 77, 200, 41};
+            Console.WriteLine("Base Array: ");
+            SortingAlgorithms.Show_array_elements(tmpArray);
+            Console.WriteLine(seperator);
+            SortingAlgorithms.PerformInsertionSort(tmpArray);
+            Console.WriteLine("Insertion sorted Array: ");
+            SortingAlgorithms.Show_array_elements(tmpArray);
+            Console.WriteLine(seperator);
+            Console.ReadKey();
+
+            tmpArray = new[] { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 80, 99, 11, 44, 77, 200, 41};
+            Console.WriteLine("Base Array: ");
+            SortingAlgorithms.Show_array_elements(tmpArray);
+            Console.WriteLine(seperator);
+            SortingAlgorithms.MergeSort(tmpArray);
+            Console.WriteLine("Merge sorted Array: ");
+            SortingAlgorithms.Show_array_elements(tmpArray);
+            Console.WriteLine(seperator);
+            Console.ReadKey();
             #endregion
             #endregion
             Console.ReadKey();

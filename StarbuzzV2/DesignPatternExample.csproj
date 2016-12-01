@@ -66,6 +66,7 @@
     <Compile Include="AD\MaxHeap\MaxHeap.cs" />
     <Compile Include="AD\MaxHeap\Node.cs" />
     <Compile Include="AD\MinHeap\MinHeap.cs" />
+    <Compile Include="AD\Sorting\SortingAlgorithms.cs" />
     <Compile Include="AD\Week1\IStack.cs" />
     <Compile Include="AD\Week1\LinkedListIterator.cs" />
     <Compile Include="AD\Week1\ListNode.cs" />
