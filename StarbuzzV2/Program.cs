@@ -313,35 +313,56 @@ namespace StarbuzzV2
 
             #region Sorting
             Console.WriteLine();
-            int[] tmpArray = { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 80, 99, 11, 44, 77, 200, 41 };
+            int[] tmpArray = { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 99, 11, 200, 41 };
             string seperator = "-----------------------------------------------------------------------";
             Console.WriteLine(seperator);
             Console.WriteLine("Base Array: ");
             SortingAlgorithms.Show_array_elements(tmpArray);
             Console.WriteLine(seperator);
-            
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             SortingAlgorithms.ShellSort(tmpArray);
-            Console.WriteLine("Shell sorted Array: ");
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine("Shell sorted Array in: "+elapsedMs+"ms");
             SortingAlgorithms.Show_array_elements(tmpArray);
             Console.WriteLine(seperator);
             Console.ReadKey();
 
-            tmpArray = new [] { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 80, 99, 11, 44, 77, 200, 41};
+            tmpArray = new[] { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 99, 11, 200, 41 };
             Console.WriteLine("Base Array: ");
             SortingAlgorithms.Show_array_elements(tmpArray);
             Console.WriteLine(seperator);
+            watch = System.Diagnostics.Stopwatch.StartNew();
             SortingAlgorithms.PerformInsertionSort(tmpArray);
-            Console.WriteLine("Insertion sorted Array: ");
+            watch.Stop();
+            elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine("Insertion sorted Array in: " + elapsedMs + "ms");
             SortingAlgorithms.Show_array_elements(tmpArray);
             Console.WriteLine(seperator);
             Console.ReadKey();
 
-            tmpArray = new[] { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 80, 99, 11, 44, 77, 200, 41};
+            tmpArray = new[] { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 99, 11, 200, 41};
             Console.WriteLine("Base Array: ");
             SortingAlgorithms.Show_array_elements(tmpArray);
             Console.WriteLine(seperator);
+            watch = System.Diagnostics.Stopwatch.StartNew();
             SortingAlgorithms.MergeSort(tmpArray);
-            Console.WriteLine("Merge sorted Array: ");
+            watch.Stop();
+            elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine("Merge sorted Array in: " + elapsedMs + "ms");
+            SortingAlgorithms.Show_array_elements(tmpArray);
+            Console.WriteLine(seperator);
+            Console.ReadKey();
+
+            tmpArray = new[] { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 99, 11, 200, 41,46 };
+            Console.WriteLine("Base Array: ");
+            SortingAlgorithms.Show_array_elements(tmpArray);
+            Console.WriteLine(seperator);
+            watch = System.Diagnostics.Stopwatch.StartNew();
+            SortingAlgorithms.QuickSort(tmpArray,0,tmpArray.Length-1);
+            watch.Stop();
+            elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine("Quick sorted Array in: " + elapsedMs + "ms");
             SortingAlgorithms.Show_array_elements(tmpArray);
             Console.WriteLine(seperator);
             Console.ReadKey();
