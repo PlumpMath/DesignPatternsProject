@@ -237,6 +237,9 @@ namespace StarbuzzV2
             #endregion
 
             #region Binairy tree
+            string seperator = "-----------------------------------------------------------------------";
+            Console.WriteLine(seperator);
+            Console.WriteLine("Binary Tree Basic: ");
             BinaryNode<int> NodeA = new BinaryNode<int>(2);
             BinaryNode<int> NodeB = new BinaryNode<int>(5);
             BinaryNode<int> NodeC = new BinaryNode<int>(6);
@@ -259,6 +262,63 @@ namespace StarbuzzV2
             tree.Root.setRight(NodeB);
 
             tree.printPreOrder();
+            Console.ReadLine();
+
+            Console.WriteLine(seperator);
+            Console.WriteLine("Binary Search Tree: ");
+            BinaryTree<int> BST = new BinaryTree<int>();
+            BST.Insert(5);
+            BST.Insert(1254);
+            BST.Insert(252);
+            BST.Insert(378);
+            BST.Insert(45);
+
+            BST.Insert(668);
+            BST.Insert(71);
+            BST.Insert(8);
+            BST.Insert(942);
+            //fail test
+            BST.Insert(1);
+
+            Console.WriteLine(seperator);
+            Console.WriteLine("Printing in order: ");
+            BST.printInOrder();
+            Console.ReadLine();
+
+            Console.WriteLine(seperator);
+            Console.WriteLine("Finding Min:");
+            Console.WriteLine(BST.FindMin());
+            Console.ReadLine();
+
+            Console.WriteLine(seperator);
+            Console.WriteLine("Finding Max: ");
+            Console.WriteLine(BST.FindMax());
+            Console.ReadLine();
+
+            Console.WriteLine(seperator);
+            Console.WriteLine("Finding value 5:");
+            Console.WriteLine(BST.Find(5));
+            Console.ReadLine();
+
+            Console.WriteLine(seperator);
+            Console.WriteLine("Removing 5");
+            BST.Remove(5);
+            Console.ReadLine();
+
+            Console.WriteLine(seperator);
+            Console.WriteLine("Printing in order: ");
+            BST.printInOrder();
+            Console.ReadLine();
+
+            Console.WriteLine(seperator);
+            Console.WriteLine("Removing Min");
+            BST.RemoveMin();
+            Console.ReadLine();
+
+            Console.WriteLine(seperator);
+            Console.WriteLine("Printing in order: ");
+            BST.printInOrder();
+            Console.ReadLine();
             #endregion
 
             #region Max heap
@@ -314,7 +374,6 @@ namespace StarbuzzV2
             #region Sorting
             Console.WriteLine();
             int[] tmpArray = { 0, 15, 48, 60, 88, 123, 1, 5, 4, 12, 99, 11, 200, 41 };
-            string seperator = "-----------------------------------------------------------------------";
             Console.WriteLine(seperator);
             Console.WriteLine("Base Array: ");
             SortingAlgorithms.Show_array_elements(tmpArray);
@@ -332,6 +391,7 @@ namespace StarbuzzV2
             Console.WriteLine("Base Array: ");
             SortingAlgorithms.Show_array_elements(tmpArray);
             Console.WriteLine(seperator);
+
             watch = System.Diagnostics.Stopwatch.StartNew();
             SortingAlgorithms.PerformInsertionSort(tmpArray);
             watch.Stop();
@@ -345,6 +405,7 @@ namespace StarbuzzV2
             Console.WriteLine("Base Array: ");
             SortingAlgorithms.Show_array_elements(tmpArray);
             Console.WriteLine(seperator);
+
             watch = System.Diagnostics.Stopwatch.StartNew();
             SortingAlgorithms.MergeSort(tmpArray);
             watch.Stop();
@@ -358,6 +419,7 @@ namespace StarbuzzV2
             Console.WriteLine("Base Array: ");
             SortingAlgorithms.Show_array_elements(tmpArray);
             Console.WriteLine(seperator);
+
             watch = System.Diagnostics.Stopwatch.StartNew();
             SortingAlgorithms.QuickSort(tmpArray,0,tmpArray.Length-1);
             watch.Stop();

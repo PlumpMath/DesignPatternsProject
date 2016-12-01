@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StarbuzzV2.AD.BST
 {
-    class PostOrder<T> : TreeIterator<T>
+    class PostOrder<T> : TreeIterator<T> where T : IComparable
     {
         protected Stack<StNode> s;
         protected class StNode {

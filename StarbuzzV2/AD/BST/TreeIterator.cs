@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StarbuzzV2.AD.BST
 {
-    abstract class TreeIterator<T>
+    abstract class TreeIterator<T> where T : IComparable
     {
         protected BinaryTree<T> t;
         protected BinaryNode<T> current;
